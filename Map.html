@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS = false; L_NO_TOUCH = false; L_DISABLE_3D = false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+    <link rel="stylesheet" href="https://rawgit.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css" />
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <style> #map_c796eb660c46428d9f1083e302e00457 {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_c796eb660c46428d9f1083e302e00457" ></div>
+        
+</body>
+<script>    
+    
+
+            
+                var bounds = null;
+            
+
+            var map_c796eb660c46428d9f1083e302e00457 = L.map(
+                                  'map_c796eb660c46428d9f1083e302e00457',
+                                  {center: [0,0],
+                                  zoom: 1,
+                                  maxBounds: bounds,
+                                  layers: [],
+                                  worldCopyJump: false,
+                                  crs: L.CRS.EPSG3857
+                                 });
+            
+        
+    
+            var tile_layer_23863ceb008746e6af80d12b0aa2a20d = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null,
+  "detectRetina": false,
+  "maxZoom": 18,
+  "minZoom": 1,
+  "noWrap": false,
+  "subdomains": "abc"
+}
+                ).addTo(map_c796eb660c46428d9f1083e302e00457);
+        
+    
+            var feature_group_c88963fbea164695b9d1730ba49b6674 = L.featureGroup(
+                ).addTo(map_c796eb660c46428d9f1083e302e00457);
+        
+    
+
+            var marker_a94b456cd82f4c4da8e045941a8da4e2 = L.marker(
+                [40.7306458,-73.9866136],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_c88963fbea164695b9d1730ba49b6674);
+            
+    
+
+                var icon_39acc94b8eab4dbca39b41e94b5aa853 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_a94b456cd82f4c4da8e045941a8da4e2.setIcon(icon_39acc94b8eab4dbca39b41e94b5aa853);
+            
+    
+            var popup_e5c504c44d0045a4948a6a5c2cf2a3a1 = L.popup({maxWidth: '300'});
+
+            
+                var html_20979943ec544b07bfa51ed13db61baa = $('<div id="html_20979943ec544b07bfa51ed13db61baa" style="width: 100.0%; height: 100.0%;">"#WarGames"</div>')[0];
+                popup_e5c504c44d0045a4948a6a5c2cf2a3a1.setContent(html_20979943ec544b07bfa51ed13db61baa);
+            
+
+            marker_a94b456cd82f4c4da8e045941a8da4e2.bindPopup(popup_e5c504c44d0045a4948a6a5c2cf2a3a1);
+
+            
+        
+    
+            var layer_control_32848bfca438434f9270f18303ba23ae = {
+                base_layers : { "openstreetmap" : tile_layer_23863ceb008746e6af80d12b0aa2a20d, },
+                overlays : { "USA" : feature_group_c88963fbea164695b9d1730ba49b6674, }
+                };
+            L.control.layers(
+                layer_control_32848bfca438434f9270f18303ba23ae.base_layers,
+                layer_control_32848bfca438434f9270f18303ba23ae.overlays,
+                {position: 'topright',
+                 collapsed: true,
+                 autoZIndex: true
+                }).addTo(map_c796eb660c46428d9f1083e302e00457);
+        
+</script>

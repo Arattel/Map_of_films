@@ -10,13 +10,17 @@ def create_map():
     map with films
     """
     year, number_coordinates = input_year_and_place()
+    film_list = search_by_year(year, number_coordinates)
+    with_coord = add_coordinates_and_area(film_list)
+    save_map(with_coord)
+    print('Map generation is finished. Please, open file "Map.html"')
 def input_year_and_place():
     """
     ->(int, int)
     This function returns number of places and year
     """
-    year = int(input())
-    number_coordinates = int(input())
+    year = int(input("Enter year:"))
+    number_coordinates = int(input("Enter maximal number of places:"))
     return (year, number_coordinates)
 def process_film(film):
     """
@@ -131,4 +135,4 @@ def save_map(film_dict):
     map_films.save('Map.html')
 
 
-print(save_map(add_coordinates_and_area(search_by_year(2015, 250))))
+create_map()
